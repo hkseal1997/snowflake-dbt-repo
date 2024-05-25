@@ -4,7 +4,8 @@ sources:
     schema: SC_ECOMM
     tables:
       - name: USERS
-
+      - name: orders
+      - name: t1
 
 models:
   - name: "sahil3"
@@ -19,3 +20,6 @@ models:
   - name: "users_v3"
     config:
       materialized: 'view'
+  - name: "cust_v4.sql"
+    config:
+      materialized: "empheremal"
