@@ -4,8 +4,13 @@ sources:
     schema: SC_ECOMM
     tables:
       - name: USERS
+      - name: DIM_SALES
+      - name: PAYMENT_MODES
       - name: orders
-      - name: t1
+      - name: orders2
+      - name: dim_payments
+      - name: person_sales
+      - name: t
 
 models:
   - name: "sahil3"

@@ -1,5 +1,3 @@
-SELECT * FROM {{source("sahil's sources","USERS")}} 
-UNION ALL
-SELECT * FROM {{source("sahil's sources","USERS")}} 
-UNION ALL
-SELECT * FROM {{source("sahil's sources","USERS")}} 
+
+SELECT *
+ FROM {{source("sahil's sources","USERS")}} 
