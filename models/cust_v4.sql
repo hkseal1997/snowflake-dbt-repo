@@ -1,12 +1,10 @@
 {{
     config(
-        materialized='view'
-    )
+        materialized='view')
+
 }}
-SELECT *,
-'{{invocation_id}}',
-'{{run_start}}',
-'{{run_end}}',
-'{{model_start}}',
-'{{model_end}}' 
+
+
+    
+SELECT * ,'{{invocation_id}}' as Invocation_ID
 FROM {{source("sahil's sources","USERS")}} 

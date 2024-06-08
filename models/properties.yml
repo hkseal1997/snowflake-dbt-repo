@@ -4,6 +4,7 @@ sources:
     schema: SC_ECOMM
     tables:
       - name: USERS
+      - name: SCD_EG
       - name: DIM_SALES
       - name: PAYMENT_MODES
       - name: orders
