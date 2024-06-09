@@ -1,8 +1,15 @@
 sources:
   - name: "sahil's sources"
+    description: "This is Sahil's SOurce"
     database: DB_ECOMM
     schema: SC_ECOMM
     tables:
+      - name: finance
+        description: "This table is used by Marketing Team , It has granularity of Sources"
+      - name: marketing
+      - name: test_table
+      - name : pii_raw
+      - name: mktg_table
       - name: USERS
       - name: SCD_EG
       - name: DIM_SALES
@@ -12,8 +19,12 @@ sources:
       - name: dim_payments
       - name: person_sales
       - name: t
+      - name: CURRENCY
 
 models:
+  - name: "e"
+    columns:
+      - name: spend
   - name: "sahil3"
     config:
       materialized: 'table'
@@ -29,3 +40,32 @@ models:
   - name: "cust_v4.sql"
     config:
       materialized: "empheremal"
+  - name: "c"
+  - name: "d"
+  - name: pii_new
+    columns:
+      - name: ID
+        tests:
+        - unique
+        - not_null
+        - relationships:
+            field: ID
+            to: ref('pii_2')
+      - name: Gender
+        tests:
+          - accepted_values:
+              values: ['Male','Female']
+  - name: marketing_stg
+    description: "This is my model for marketing team developed by @sahil at 9th June"
+    columns:
+      - name: Sales
+        description: "Sales Column coming from FACT_SALES"
+        tests:
+            - new_test
+  - name: finance
+    columns:
+      - name: Sales
+        tests:
+            - dbt_expectations.expect_column_values_to_be_between:
+                min_value: 100
+                max_value: 200

@@ -6,13 +6,13 @@ SUM(CASE WHEN PAYMENT_MODE='{{i}}' THEN SALES END) AS {{i}}_sales {%- if not loo
 FROM {{source("sahil's sources",'PAYMENT_MODES')}}
 
 
-{% set payment_modes=dbt_utils.get_column_values(source("sahil's sources",'PAYMENT_MODES'),'PAYMENT_MODE') %} 
-SELECT
-{% for i in payment_modes %}
-SUM(CASE WHEN PAYMENT_MODE='{{i}}' THEN SALES END) AS {{ i | lower }}_SALES 
-{{loop.first}}
-{% endfor %}
-FROM {{source("sahil's sources",'PAYMENT_MODES')}}
+-- {% set payment_modes=dbt_utils.get_column_values(source("sahil's sources",'PAYMENT_MODES'),'PAYMENT_MODE') %} 
+-- SELECT
+-- {% for i in payment_modes %}
+-- SUM(CASE WHEN PAYMENT_MODE='{{i}}' THEN SALES END) AS {{ i | lower }}_SALES 
+-- {{loop.first}}
+-- {% endfor %}
+-- FROM {{source("sahil's sources",'PAYMENT_MODES')}}
 
 -- {% set a=['a','b','c']%}
 -- {% for i in a%}

@@ -1,6 +1,9 @@
 {{
     config(
-        materialized='view')
+        materialized='view',
+        alias="New_table_name" ,
+        tags=['daily']
+        )
 
 }}
 
