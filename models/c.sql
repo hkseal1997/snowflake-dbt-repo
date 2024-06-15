@@ -1,1 +1,0 @@
-SELECT * FROM {{source("sahil's sources",'test_table')}}
