@@ -1,0 +1,1 @@
+SELECT * FROM {{source("Sf_sources",'enrollments')}}

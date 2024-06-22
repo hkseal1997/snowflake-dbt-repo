@@ -1,8 +1,8 @@
 version: 2.0.0
 name: "dbt_first_project"
 model-paths: ["models"]
-seed-paths: ["custom-seeds"]
-analysis-paths: ["custom-analyses"]
+seed-paths: ["seeds"]
+analysis-paths: ["nalyses"]
 macro-paths: ['macros']
 snapshot-paths: ['snapshots']
 test-paths: ['tests']

@@ -1,9 +1,8 @@
 sources:
-  - name: "Snowflake Source"
-    description: '{{ doc("orders") }}'
-    database: DB_ECOMM
-    schema: RAW
+  - name: "Sf_sources"
+    database: DB_EDTECH
+    schema: SCH_EDTECH
     tables:
-      - name: raw_customers
-      - name: raw_orders
-      - name: raw_payments
+      - name: courses
+      - name: enrollments
+      - name: students
